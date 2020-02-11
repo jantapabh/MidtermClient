@@ -38,18 +38,21 @@ net.createServer(function (sock) {
             if (data.toString() == "cat") {
 
                 countCat = countCat + 1;
+                console.log("{ cat: ,dog: ,bird: }",countCat,countDog,countBird);
                 sock.destroy();
 
             }
             else if (data.toString() == "dog") {
 
                 countDog = countDog + 1;
+                console.log("{ cat: ,dog: ,bird: }",countCat,countDog,countBird);
                 sock.destroy();
 
             }
             else {
 
                 countBird = countBird + 1;
+                console.log("{ cat: ,dog: ,bird: }",countCat,countDog,countBird);
                 sock.destroy();
             }
 
@@ -58,18 +61,21 @@ net.createServer(function (sock) {
             if (data.toString() == "cat") {
 
                 countCat = countCat - 1;
+                console.log("{ cat: ,dog: ,bird: }",countCat,countDog,countBird);
                 sock.destroy();
 
             }
             else if (data.toString() == "dog") {
 
                 countDog = countDog - 1;
+                console.log("{ cat: ,dog: ,bird: }",countCat,countDog,countBird);
                 sock.destroy();
 
             }
             else {
 
                 countBird = countBird - 1;
+                console.log("{ cat: ,dog: ,bird: }",countCat,countDog,countBird);
                 sock.destroy();
             }
         }
