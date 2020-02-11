@@ -20,6 +20,8 @@ client.on('data', function (data) {
     if(resp == "OK")
     {
         client.write('cat');
+        // console.log("Cat")
+
     }
   
 

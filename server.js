@@ -2,8 +2,6 @@
 var net = require('net');
 var HOST = '127.0.0.1';
 var PORT = 1337;
-var j = 1;
-var i = 1;
 
 
 
@@ -17,9 +15,18 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
+        var i = 0;
+
         if(data.toString() == "+")
         {
                 sock.write("OK");
+
+                if(data.toString() == "cat") {
+                      
+                i = i+1;
+                console.log("OK")
+
+                }
 
         }
         else{
