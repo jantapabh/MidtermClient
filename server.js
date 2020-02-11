@@ -15,12 +15,17 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
+        console.log(data.toString());
+
 
         if (data.toString() == "+" || data.toString() == "-") {
 
             sock.write("OK");
+            j = 1;
          
-        }else{
+        }
+        
+        if( j == 1){
      
             if (data.toString() == "+" && data.toString() == "cat") {
 
