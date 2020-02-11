@@ -4,9 +4,10 @@ var net = require('net');
 var HOST = '127.0.0.1';
 var PORT = 1337;
 let i = 1;
-
+let j = 0;
 
 var client = new net.Socket();
+
 client.connect(PORT, HOST, function () {
 
     console.log('Connected');
@@ -17,14 +18,12 @@ client.connect(PORT, HOST, function () {
 client.on('data', function (data) {
 
     var resp = ("" + data).trim();
+
     if(resp == "OK")
     {
         client.write('cat');
         // console.log("Cat")
-
     }
-  
-
 });
 
 client.on('error', function (error) {
