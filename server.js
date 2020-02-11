@@ -38,52 +38,49 @@ net.createServer(function (sock) {
             if (data.toString() == "cat") {
 
                 countCat = countCat + 1;
-                console.log({cat: " ",countCat});
+                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
             else if (data.toString() == "dog") {
 
                 countDog = countDog + 1;
-                console.log({dog: " ",countDog});
+                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
             else {
 
                 countBird = countBird + 1;
-                console.log({bird: " ",countBird});
+                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
 
-        } else if (j == 2) {
+        } 
+        else {
 
             if (data.toString() == "cat") {
 
                 countCat = countCat - 1;
-                console.log({cat: " ",countCat});
+                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
             else if (data.toString() == "dog") {
 
                 countDog = countDog - 1;
-                console.log({dog: " ",countDog});
+                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
             else {
 
                 countBird = countBird - 1;
-                console.log({bird: " ",countBird});
+                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
         }
-        else {
-
-            sock.destroy();
-
-        }
+     
 
     });
 
