@@ -8,7 +8,6 @@ let countDog = 0;
 let countBird = 0;
 
 
-
 net.createServer(function (sock) {
 
     console.log('Strat connect : ' + sock.remoteAddress + ':' + sock.remotePort);
@@ -16,22 +15,72 @@ net.createServer(function (sock) {
     sock.on('data', function (data) {
 
 
-
-        if (data.toString() == "+") {
-
+        if (data.toString() == "+" || data.toString() == "-") {
 
             sock.write("OK");
 
-            console.log(data.toString())
+            console.log(data.toString()) //แสดงเครื่องหมาย
+
+            if(data.toString() == "+")
+            {
+
+               j = 1;
+
+            }
+            else
+            {
+
+                j = 0;
+            }
 
         }
 
-        if (data.toString() == 'cat') {
-            console.log(data.toString())
-            countCat = countCat + 1;
-            console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
-            sock.destroy();
+        else{
+            
+         if( j == 1){
 
+            if (data.toString() == 'cat') {
+                countCat = countCat + 1;
+                console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+                sock.destroy();
+            }
+            else if (data.toString() == 'dog') {
+                countDog = countDog + 1;
+                console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+                sock.destroy();
+            }
+            else {
+                countBird = countBird + 1;
+                console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+                sock.destroy();
+            }
+        }
+        else{
+
+            if (data.toString() == 'cat') {
+                countCat = countCat - 1;
+                console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+                sock.destroy();
+            }
+            else if (data.toString() == 'dog') {
+                countDog = countDog - 1;
+                console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+                sock.destroy();
+            }
+            else {
+                countBird = countBird - 1;
+                console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+                sock.destroy();
+            }
+
+
+
+
+
+
+
+
+        }
         }
 
 
