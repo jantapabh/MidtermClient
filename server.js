@@ -15,71 +15,76 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
-    
 
-        if (data.toString() == "+" ) {
 
-            
-            j = 1;
+        if (data.toString() == "+") {
+
+
             sock.write("OK");
-         
-        }
-        else{
 
-            j = 2;
-            sock.write("OK");
+            console.log(data.toString())
+
         }
 
-        if( j == 1){
-     
-            if (data.toString() == "cat") {
+        if (data.toString() == 'cat') {
+            console.log(data.toString())
+            countCat = countCat + 1;
+            console.log({ cat: +countCat, dog: +countDog, bird: +countBird });
+            sock.destroy();
 
-                 countCat = countCat + 1;
-                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
-                sock.destroy();
-
-            }
-            else if (data.toString() == "dog") {
-
-                countDog = countDog + 1;
-                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
-                sock.destroy();
-
-            }
-            else {
-
-                countBird = countBird + 1;
-                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
-                sock.destroy();
-            }
         }
-        else
-        {
-              
-            if (data.toString() == "cat") {
 
-                countCat = countCat - 1;
-                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
-                sock.destroy();
 
-            }
-            else if(data.toString() == "dog"){
 
-                countDog = countDog + 1;
-                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
-                sock.destroy();
-            }
+        //     if (data.toString() == "cat") {
 
-            else {
+        //         countCat = countCat + 1;
+        //        console.log({cat: +countCat, dog: +countDog, bird: +countBird});
+        //        sock.destroy();
 
-                countBird = countBird - 1;
-                console.log({cat: +countCat, dog: +countDog, bird: +countBird});
-                sock.destroy();
-            }
-        }
-            
-        
-        }
+        //    }
+        //    else if (data.toString() == "dog") {
+
+        //        countDog = countDog + 1;
+        //        console.log({cat: +countCat, dog: +countDog, bird: +countBird});
+        //        sock.destroy();
+
+        //    }
+        //    else {
+
+        //        countBird = countBird + 1;
+        //        console.log({cat: +countCat, dog: +countDog, bird: +countBird});
+        //        sock.destroy();
+        //    }
+        //     else{
+
+        //         sock.write("OK");
+        //         if (data.toString() == "cat"){
+
+        //             countCat = countCat - 1;
+        //             console.log({cat: +countCat, dog: +countDog, bird: +countBird});
+        //             sock.destroy();
+
+        //         }
+        //         else if(data.toString() == "dog"){
+
+        //             countDog = countDog - 1;
+        //             console.log({cat: +countCat, dog: +countDog, bird: +countBird});
+        //             sock.destroy();
+        //         }
+
+        //         else {
+
+        //             countBird = countBird - 1;
+        //             console.log({cat: +countCat, dog: +countDog, bird: +countBird});
+        //             sock.destroy();
+        //         }
+        //     }
+
+
+
+
+    }
 
     );
 
