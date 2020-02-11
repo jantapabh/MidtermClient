@@ -20,60 +20,16 @@ net.createServer(function (sock) {
 
         if (data.toString() == "+") {
 
+            console.log("+");
             sock.write("OK");
 
            
 
         }
-        // else {
-
-        //     j = 2;
-        //     sock.write("OK");
-
-        // } //ถ้าส่งเป็น + ให้ j = 1 และ ถ้าเป็นลบให้ j = 2 
-
-        // if (j == 1)   //ถ้า client ส่งมาเป็น + 
-        // {
-        //     if (data.toString() == "cat") {
-
-        //         countCat = countCat + 1;
-
-        //     }
-        //     else if (data.toString() == "dog") {
-
-        //         countDog = countDog + 1;
-
-        //     } else {
-
-        //         countBird = countBird + 1;
-        //     }
-
-        // }
-        // else if (j == 2) {   // ถ้า client ส่งมาเป็น -
-
-        //     if (data.toString() == "cat") {
-
-        //         countCat = countCat - 1;
-
-
-        //     }
-        //     else if (data.toString() == "dog") {
-
-        //         countDog = countDog - 1;
-
-
-        //     } else {
-
-        //         countBird = countBird - 1;
-
-
-        //     }
-
-        // }
         else {
 
-
-            sock.destroy();
+            console.log("-");
+            sock.write("OK");
         }
 
 
