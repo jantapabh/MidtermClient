@@ -17,7 +17,7 @@ client.connect(PORT, HOST, function () {
 
 client.on('data', function (data) {
 
-    var resp = ("" + data).trim();
+    var resp = (" " + data).trim();
 
     if(resp == "OK")
     {

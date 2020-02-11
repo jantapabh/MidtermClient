@@ -20,12 +20,15 @@ net.createServer(function (sock) {
 
         if (data.toString() == "+") {
 
+            sock.write("OK");
+
             j = 1;
 
         }
         else {
 
             j = 2;
+            sock.write("OK");
 
         } //ถ้าส่งเป็น + ให้ j = 1 และ ถ้าเป็นลบให้ j = 2 
 
