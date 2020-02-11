@@ -21,12 +21,12 @@ net.createServer(function (sock) {
         {
                 sock.write("OK");
 
-               
         }
         else{
 
             if(data.toString() == "cat") {
                       
+                
                 i = i+1;
                 console.log("OK")
 
