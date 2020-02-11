@@ -21,7 +21,7 @@ client.on('data', function (data) {
 
     if(resp.toString() == "OK")
     {
-        client.write('cat');
+        client.write('dog');
        
        
     }

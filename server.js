@@ -15,48 +15,57 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
-        console.log(data.toString());
+    
 
+        if (data.toString() == "+" ) {
 
-        if (data.toString() == "+" || data.toString() == "-") {
-
-            sock.write("OK");
+            
             j = 1;
+            sock.write("OK");
          
         }
-        
+        else{
+
+            j = 2;
+            sock.write("OK");
+        }
+
         if( j == 1){
      
-            if (data.toString() == "+" && data.toString() == "cat") {
+            if (data.toString() == "cat") {
 
                  countCat = countCat + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if (data.toString() == "+" && data.toString() == "dog") {
+            else if (data.toString() == "dog") {
 
                 countDog = countDog + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if(data.toString() == "+" && data.toString() == "bird"){
+            else {
 
                 countBird = countBird + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
-            else if (data.toString() == "-" && data.toString() == "cat") {
+        }
+        else
+        {
+              
+            if (data.toString() == "cat") {
 
                 countCat = countCat - 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if(data.toString() == "-" && data.toString() == "dog"){
+            else if(data.toString() == "dog"){
 
-                countDogc= countDog + 1;
+                countDog = countDog + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
@@ -67,10 +76,12 @@ net.createServer(function (sock) {
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
+        }
+            
         
         }
 
-    });
+    );
 
     sock.on('close', function (data) {
 
