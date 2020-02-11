@@ -20,29 +20,63 @@ net.createServer(function (sock) {
 
         if (data.toString() == "+") {
 
-            console.log("+");
-            sock.write("OK");
 
+            sock.write("OK");
             j = 1;
 
         }
         else {
 
-            console.log("-");
+
             sock.write("OK");
+            j = 2;
+
         }
 
         if (j == 1) {
 
-            console.log("cat");
-            countCat = countCat + 1;    
+            if (data.toString() == "cat") {
 
-        } else {
+                countCat = countCat + 1;
+                sock.destroy();
 
+            }
+            else if (data.toString() == "dog") {
 
-            console.log("dog");
-            countDog = countDog + 1;    
-        
+                countDog = countDog + 1;
+                sock.destroy();
+
+            }
+            else {
+
+                countBird = countBird + 1;
+                sock.destroy();
+            }
+
+        } else if (j == 2) {
+
+            if (data.toString() == "cat") {
+
+                countCat = countCat - 1;
+                sock.destroy();
+
+            }
+            else if (data.toString() == "dog") {
+
+                countDog = countDog - 1;
+                sock.destroy();
+
+            }
+            else {
+
+                countBird = countBird - 1;
+                sock.destroy();
+            }
+        }
+        else {
+
+            sock.destroy();
+
         }
 
     });
@@ -50,8 +84,7 @@ net.createServer(function (sock) {
     sock.on('close', function (data) {
 
 
-        console.log("cat: ",countCat);
-        sock.destroy();
+        console.log("Not Connect");
 
     });
 
