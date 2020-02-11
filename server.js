@@ -5,7 +5,7 @@ var PORT = 1337;
 let j = 0;
 let countCat = 0;
 let countDog = 0;
-let countBird= 0;
+let countBird = 0;
 
 
 
@@ -23,7 +23,7 @@ net.createServer(function (sock) {
             console.log("+");
             sock.write("OK");
 
-           
+            j = 1;
 
         }
         else {
@@ -32,6 +32,16 @@ net.createServer(function (sock) {
             sock.write("OK");
         }
 
+        if (j == 1) {
+
+            console.log("cat");
+            sock.destroy();
+        } else {
+
+
+            console.log("dog");
+            sock.destroy();
+        }
 
     });
 
