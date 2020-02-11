@@ -17,9 +17,9 @@ client.connect(PORT, HOST, function () {
 
 client.on('data', function (data) {
 
-    var resp = (" " + data).trim();
+    var resp = data.toString().trim();
 
-    if(resp == "OK")
+    if(resp.toString() == "OK")
     {
         client.write('cat');
         // console.log("Cat")

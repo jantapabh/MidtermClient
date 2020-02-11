@@ -22,54 +22,54 @@ net.createServer(function (sock) {
 
             sock.write("OK");
 
-            j = 1;
+           
 
         }
-        else {
+        // else {
 
-            j = 2;
-            sock.write("OK");
+        //     j = 2;
+        //     sock.write("OK");
 
-        } //ถ้าส่งเป็น + ให้ j = 1 และ ถ้าเป็นลบให้ j = 2 
+        // } //ถ้าส่งเป็น + ให้ j = 1 และ ถ้าเป็นลบให้ j = 2 
 
-        if (j == 1)   //ถ้า client ส่งมาเป็น + 
-        {
-            if (data.toString() == "cat") {
+        // if (j == 1)   //ถ้า client ส่งมาเป็น + 
+        // {
+        //     if (data.toString() == "cat") {
 
-                countCat = countCat + 1;
+        //         countCat = countCat + 1;
 
-            }
-            else if (data.toString() == "dog") {
+        //     }
+        //     else if (data.toString() == "dog") {
 
-                countDog = countDog + 1;
+        //         countDog = countDog + 1;
 
-            } else {
+        //     } else {
 
-                countBird = countBird + 1;
-            }
+        //         countBird = countBird + 1;
+        //     }
 
-        }
-        else if (j == 2) {   // ถ้า client ส่งมาเป็น -
+        // }
+        // else if (j == 2) {   // ถ้า client ส่งมาเป็น -
 
-            if (data.toString() == "cat") {
+        //     if (data.toString() == "cat") {
 
-                countCat = countCat - 1;
-
-
-            }
-            else if (data.toString() == "dog") {
-
-                countDog = countDog - 1;
+        //         countCat = countCat - 1;
 
 
-            } else {
+        //     }
+        //     else if (data.toString() == "dog") {
 
-                countBird = countBird - 1;
+        //         countDog = countDog - 1;
 
 
-            }
+        //     } else {
 
-        }
+        //         countBird = countBird - 1;
+
+
+        //     }
+
+        // }
         else {
 
 
