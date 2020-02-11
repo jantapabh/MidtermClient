@@ -18,76 +18,66 @@ net.createServer(function (sock) {
         let i = 1;
 
 
-        if (data.toString() == "+") {
-
+        if (data.toString() == "+" || data.toString() == "-") {
 
             sock.write("OK");
             j = 1;
-
         }
-        else {
+     
 
+      if(i == 1){
 
-            sock.write("OK");
-            j = 2;
+            if (data.toString() == '+' && data.toString() == 'cat') {
 
-        }
-
-        if (j == 1) {
-
-            if (data.toString() == "cat") {
+             
 
                 countCat = countCat + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if (data.toString() == "dog") {
+            else if (data.toString() == '+'&& data.toString() == 'dog') {
 
                 countDog = countDog + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else {
+            else if(data.toString() == '+' && data.toString() == 'bird'){
 
                 countBird = countBird + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
-
-        } 
-        else {
-
-            if (data.toString() == "cat") {
+            else if (data.toString() == '-' && data.toString() == 'cat') {
 
                 countCat = countCat - 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if (data.toString() == "dog") {
+            else if(data.toString() == '-' && data.toString() == 'dog'){
 
-                countDog = countDog - 1;
+                countDogc= countDog + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
-
             }
+
             else {
 
                 countBird = countBird - 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
+        
         }
-     
 
     });
 
     sock.on('close', function (data) {
 
 
-        console.log("Not Connect");
+        // console.log("Not Connect");
 
     });
 
