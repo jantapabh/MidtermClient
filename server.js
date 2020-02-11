@@ -35,19 +35,23 @@ net.createServer(function (sock) {
         if (j == 1) {
 
             console.log("cat");
-            sock.destroy();
+            countCat = countCat + 1;    
+
         } else {
 
 
             console.log("dog");
-            sock.destroy();
+            countDog = countDog + 1;    
+        
         }
 
     });
 
     sock.on('close', function (data) {
 
-        // sock.destroy();
+
+        console.log("cat: ",countCat);
+        sock.destroy();
 
     });
 

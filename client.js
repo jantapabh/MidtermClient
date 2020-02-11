@@ -11,7 +11,7 @@ var client = new net.Socket();
 client.connect(PORT, HOST, function () {
 
     console.log('Connected');
-    client.write('+'); // + or -
+    client.write("+"); // + or -
 
 });
 
