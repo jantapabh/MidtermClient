@@ -2,7 +2,7 @@
 var net = require('net');
 var HOST = '127.0.0.1';
 var PORT = 1337;
-let j = 0;
+var j = 0;
 let countCat = 0;
 let countDog = 0;
 let countBird = 0;
@@ -15,48 +15,41 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
-        let i = 1;
-
 
         if (data.toString() == "+" || data.toString() == "-") {
 
             sock.write("OK");
-            j = 1;
-        }
+         
+        }else{
      
+            if (data.toString() == "+" && data.toString() == "cat") {
 
-      if(i == 1){
-
-            if (data.toString() == '+' && data.toString() == 'cat') {
-
-             
-
-                countCat = countCat + 1;
+                 countCat = countCat + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if (data.toString() == '+'&& data.toString() == 'dog') {
+            else if (data.toString() == "+" && data.toString() == "dog") {
 
                 countDog = countDog + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if(data.toString() == '+' && data.toString() == 'bird'){
+            else if(data.toString() == "+" && data.toString() == "bird"){
 
                 countBird = countBird + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
             }
-            else if (data.toString() == '-' && data.toString() == 'cat') {
+            else if (data.toString() == "-" && data.toString() == "cat") {
 
                 countCat = countCat - 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
                 sock.destroy();
 
             }
-            else if(data.toString() == '-' && data.toString() == 'dog'){
+            else if(data.toString() == "-" && data.toString() == "dog"){
 
                 countDogc= countDog + 1;
                 console.log({cat: +countCat, dog: +countDog, bird: +countBird});
