@@ -9,7 +9,6 @@ let countBird = 0;
 
 
 
-
 net.createServer(function (sock) {
 
     console.log('Strat connect : ' + sock.remoteAddress + ':' + sock.remotePort);
