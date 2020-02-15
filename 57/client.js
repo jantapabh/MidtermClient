@@ -7,6 +7,8 @@ let i = 1;
 let j = 0;
 
 
+
+
 var client = new net.Socket();
 
 client.connect(PORT, HOST, function () {
