@@ -1,13 +1,10 @@
-// TCP Client
+// TCP Client  58
 
 var net = require('net');
 var HOST = '127.0.0.1';
 var PORT = 1337;
 let i = 1;
 let j = 0;
-
-
-
 
 var client = new net.Socket();
 
