@@ -17,13 +17,14 @@ client.connect(PORT, HOST, function () {
 });
 
 
+
 client.on('data', function (data) {
 
     var resp = data.toString().trim();
 
     if(resp.toString() == "OK")
     {
-        
+
         client.write('bird');
        
        
