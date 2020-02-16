@@ -13,6 +13,7 @@ client.connect(PORT, HOST, function () {
 
     console.log('Connected');
     client.write("+"); // + or -
+    
 
 });
 
