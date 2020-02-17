@@ -11,10 +11,8 @@ var client = new net.Socket();
 
 client.connect(PORT, HOST, function () {
 
-
     console.log('Connected');
     client.write("+"); // + or -
-
 });
 
 client.on('data', function (data) {
@@ -23,9 +21,8 @@ client.on('data', function (data) {
 
     if(resp.toString() == "OK")
     {
-
         client.write('bird');
-              
+             
     }
 });
 
