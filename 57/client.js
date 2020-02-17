@@ -30,8 +30,6 @@ client.on('error', function (error) {
     // console.log(error);
 });
 
-
-
 // Add a 'close' event handler for the client socket
 client.on('close', function () {
     console.log('Connection closed');
