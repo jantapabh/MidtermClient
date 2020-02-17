@@ -17,8 +17,6 @@ client.connect(PORT, HOST, function () {
 });
 
 
-
-
 client.on('data', function (data) {
 
     var resp = data.toString().trim();
@@ -27,7 +25,6 @@ client.on('data', function (data) {
     {
 
         client.write('bird');
-       
        
     }
 });
