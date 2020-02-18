@@ -28,7 +28,7 @@ net.createServer(function (sock) {
 
                 j = 1;
 
-                console.log(data.toString());
+                // console.log(data.toString());
 
 
             }
