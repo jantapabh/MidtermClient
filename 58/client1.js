@@ -24,16 +24,16 @@ client.on('data', function (data) {
     if(resp.toString() == "OK")
     {
         
-        var number = 30;
+       
 
-        client.write(number.toString());
+        // client.write(number.toString());
 
-        if(!data.toString())
-        {
-               var sum = parseInt(data.toString());
-               console.log("Sum is  :   " + sum);
+        // if(!data.toString())
+        // {
+        //        var sum = parseInt(data.toString());
+        //        console.log("Sum is  :   " + sum);
 
-        }
+        // }
 
            
             

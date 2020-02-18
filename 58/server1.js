@@ -14,38 +14,17 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
-        // if(data.toString() == 'Jantapa')
-        // {
+        if(data.toString() == 'Jantapa')
+        {
             
-        //     let name = data.toString();
+            console.log("Jan");
 
-        //     sock.write("OK");
+            let name = data.toString();
 
-        //     if(!data.toString())
-        //     {
+            sock.write("OK");
 
-        //         if(data.toString() == name)
-        //         {
-
-        //             var sum = 0;
-
-        //             if(sum == 0)
-        //             {
-
-        //                  sum = 0 + parseInt(data.toString());
-
-        //                  sock.write(sum.toString());
-
-        //                  sock.destroy();
-
-        //             }
-
-        //         }
-                  
-
-        //     }
-               
-        // }
+           
+        }
     
     }
 
