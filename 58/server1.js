@@ -22,31 +22,35 @@ net.createServer(function (sock) {
 
             // console.log(data.toString());
 
-            j = 1 ;
-    
-        }else{
+            j = 1;
+
+        } else {
 
             if (j == 1) {
 
                 var sum = 0;
-                console.log(data.toString());
+                // console.log(data.toString());
 
-       
-                if (sum == 0) {
-                    sum = 0 + (parseInt(data.toString()));
-                    sock.write(sum.toString());
-                    sock.destroy();
+                if (!data.toString()) {
 
-                } else {
+                       console.log(data.toString());
 
-                    sum = sum + (parseInt(data.toString()));
-                    sock.write(sum.toString());
-                    sock.destroy();
+                    if (sum == 0) {
+                        sum = 0 + (parseInt(data.toString()));
+                        sock.write(sum.toString());
+                        sock.destroy();
 
+                    } else {
+
+                        sum = sum + (parseInt(data.toString()));
+                        sock.write(sum.toString());
+                        sock.destroy();
+
+                    }
                 }
             }
         }
-});
+    });
 
     sock.on('close', function (data) {
 
