@@ -6,7 +6,7 @@ var net = require('net');
 var HOST = '127.0.0.1';
 var PORT = 1337;
 var j = 0;
-
+var sum = 0;
 
 net.createServer(function (sock) {
 
@@ -30,24 +30,26 @@ net.createServer(function (sock) {
 
         } else {
 
-               
-                      
-            if( j == 1){
-
-                let sum = 0 + parseInt(data.toString());
 
 
-                if(sum != 0)
-                {
-                    sum = sum + sum;
+            if (j == 1) {
+
+                if (sum != 0) {
+                    sum = sum + parseInt(data.toString());
                     sock.write(sum.toString());
                     sock.destroy();
 
+                } else {
+
+                    sum = 0 + parseInt(data.toString());
+                    sock.write(sum.toString());
+                    sock.destroy();
+
+
                 }
 
-           }
+            }
 
-       
         }
     });
 
