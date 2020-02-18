@@ -26,16 +26,20 @@ client.on('data', function (data) {
 
         console.log(resp.toString());
 
-        
+
         
         client.write("50");
+                     
+    }
 
-         var sum = parseInt(data);
-     
-       
-  
+    else{
 
-                      
+
+        var sum = (parseInt(data.toString()));
+
+        console.log(sum);
+
+
     }
 });
 

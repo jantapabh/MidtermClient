@@ -32,21 +32,19 @@ net.createServer(function (sock) {
 
             if (j == 1) {
 
-                var sum = 0;
+                let sum = 0;
 
-                console.log(data.toString());
+                    if (sum != 0) {
 
-                        if (sum == 0) {
-                        sum = 0 + (parseInt(data.toString()));
-                        console.log(sum);
+                        sum = sum + parseInt(data.toString());
                         sock.write(sum.toString());
-                        sock.destroy();
+                        
 
-                    } else {
+                    } else if(sum == 0){
 
-                        sum = sum + (parseInt(data.toString()));
+                        sum = 0 + parseInt(data.toString());
                         sock.write(sum.toString());
-                        sock.destroy();
+                       
 
                     }
                 }
