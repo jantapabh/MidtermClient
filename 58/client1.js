@@ -35,7 +35,7 @@ client.on('data', function (data) {
     else{
 
 
-        var sum = (parseInt(data.toString()));
+        var sum = parseInt(data.toString());
 
         console.log(sum);
 
