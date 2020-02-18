@@ -3,15 +3,14 @@ import App from './App';
 
 
 // Props
-const ShowName = (props) => {
+const ShowName = (props) => (
 
     <div>
-
         Name : {props.name} <br />
         Surname : {props.surname}
    </div>
 
-}
+)
 
 
 const StateTest = () => {
@@ -24,6 +23,11 @@ const StateTest = () => {
         <div>
             
             <ShowName name={name} surname={surname} />
+            <input type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="name"
+            />
             
         </div>
     );
