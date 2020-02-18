@@ -18,6 +18,8 @@ net.createServer(function (sock) {
 
             let name = "Jantapa";
 
+            console.log("Name Connect is  " + data.toString());
+
             sock.write("OK");
 
             // console.log(data.toString());
@@ -29,8 +31,6 @@ net.createServer(function (sock) {
             }
 
         } else {
-
-
 
             if (j == 1) {
 

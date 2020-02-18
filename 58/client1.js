@@ -26,7 +26,7 @@ client.on('data', function (data) {
 
         console.log(resp.toString());
 
-        client.write("500");
+        client.write("700");
                      
     }
 
@@ -34,9 +34,7 @@ client.on('data', function (data) {
 
         var sum = parseInt(data.toString());
 
-        console.log(sum);
-
-        
+        console.log(" Sum is :   " + sum);
 
     }
 });
