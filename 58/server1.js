@@ -23,21 +23,51 @@ net.createServer(function (sock) {
 
             sock.write("OK");
 
-            j = 1;
+            if(!data.toString()){
 
-            if(data.toString() == "50"){
+                  j = 1;
                 
-                let test = data.toString();
+                
+            }else{
 
-                console.log(test);
-
-                // var num = parseInt(data.toString);
-
-                // console.log(num);
+                  j = 0;
 
 
             }
            
+        }else{
+
+            if(j == 1)
+            {
+
+                var sum = 0;
+
+                if(data.toString() == name && sum == 0)
+                {
+
+                    sum = 0 + (parseInt(data.toString()));
+
+                    sock.write(sum.toString());
+
+                    sock.destroy();
+
+
+
+                }else{
+
+
+                    sum = sum + (parseInt(data.toString()));
+                    sock.write(sum.toString());
+                    sock.destroy();
+
+
+
+
+                }
+            }
+
+
+
         }
     
     }
