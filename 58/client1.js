@@ -19,13 +19,24 @@ client.connect(PORT, HOST, function () {
 
 client.on('data', function (data) {
 
-    var resp = data.toString().trim();
+    var resp = data.toString();
 
     if(resp.toString() == "OK")
     {
+        
+        var number = 30;
 
-        client.write('30');
-       
+        client.write(number.toString());
+
+        if(!data.toString())
+        {
+               var sum = parseInt(data.toString());
+               console.log("Sum is  :   " + sum);
+
+        }
+
+           
+            
     }
 });
 

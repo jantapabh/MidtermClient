@@ -16,18 +16,36 @@ net.createServer(function (sock) {
 
         if(data.toString() == 'Jantapa')
         {
+            
+            let name = data.toString();
+
             sock.write("OK");
 
-            if(data.toString() == "Jantapa")
+            if(!data.toString())
             {
-                
+
+                if(data.toString() == name)
+                {
+
+                    var sum = 0;
+
+                    if(sum == 0)
+                    {
+
+                         sum = 0 + parseInt(data.toString());
+
+                         sock.write(sum.toString());
+
+                         sock.destroy();
+
+                    }
+
+                }
+                  
+
             }
-         
-              
-
+               
         }
-
-        
     
     }
 
