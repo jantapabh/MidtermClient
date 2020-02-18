@@ -13,7 +13,7 @@ const EffectTest = () => {
     useEffect(() => {
 
         fetchUsers()
-        console.log(..);
+        console.log('..');
     })
 
 
@@ -33,8 +33,6 @@ const EffectTest = () => {
                 <h1>Hello</h1>
                 <img src={avatar_url}  alt="Jan" width="80px" />
                 <button onClick={fetchUsers}>Click it !</button>
-
-
             </div>
         </div>
 
