@@ -38,7 +38,7 @@ net.createServer(function (sock) {
                     if (sum != 0) {
 
                         var s = sum + parseInt(data.toString())
-                        sock.write();
+                        sock.write(parseInt(s.toString()));
                         sock.destroy();
                         
 
@@ -46,7 +46,7 @@ net.createServer(function (sock) {
 
                        
                         sum = sum + parseInt(data.toString());
-                        sock.write(sum);
+                        sock.write(parseInt(sum.toString()));
                         sock.destroy();
                        
 
