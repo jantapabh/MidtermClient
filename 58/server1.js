@@ -16,27 +16,29 @@ net.createServer(function (sock) {
 
         if (data.toString() == 'Jantapa') {
 
-            let name = data.toString();
+            let name = "Jantapa";
 
             sock.write("OK");
 
             // console.log(data.toString());
 
+            if(data.toString() == name){
+
             j = 1;
+
+            }
 
         } else {
 
             if (j == 1) {
 
                 var sum = 0;
-                // console.log(data.toString());
 
-                if (!data.toString()) {
+                console.log(data.toString());
 
-                       console.log(data.toString());
-
-                    if (sum == 0) {
+                        if (sum == 0) {
                         sum = 0 + (parseInt(data.toString()));
+                        console.log(sum);
                         sock.write(sum.toString());
                         sock.destroy();
 
@@ -49,7 +51,6 @@ net.createServer(function (sock) {
                     }
                 }
             }
-        }
     });
 
     sock.on('close', function (data) {
