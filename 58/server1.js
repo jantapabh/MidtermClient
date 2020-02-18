@@ -22,7 +22,7 @@ net.createServer(function (sock) {
 
             sock.write("OK");
 
-            // console.log(data.toString());
+            console.log(data.toString());
 
             if (data.toString() == name) {
 
