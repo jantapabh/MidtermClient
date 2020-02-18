@@ -16,8 +16,6 @@ net.createServer(function (sock) {
 
         if (data.toString() == 'Jantapa') {
 
-            // console.log("Jan");
-
             let name = data.toString();
 
             sock.write("OK");
@@ -28,12 +26,9 @@ net.createServer(function (sock) {
 
                 j = 1;
 
-                // console.log(data.toString());
-
-
             }
+        
 
-        } else {
 
             if (j == 1) {
 
@@ -52,9 +47,7 @@ net.createServer(function (sock) {
 
                 }
             }
-
         }
-
     }
 
     );
