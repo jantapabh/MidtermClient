@@ -27,9 +27,13 @@ net.createServer(function (sock) {
 
             if( j == 1){
                 
-                var num = parseInt(data);
+                let test = data.toString();
 
-                console.log(num);
+                console.log(test);
+
+                // var num = parseInt(data.toString);
+
+                // console.log(num);
 
 
             }

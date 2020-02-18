@@ -26,9 +26,9 @@ client.on('data', function (data) {
 
         console.log(resp.toString());
         
-        var number = 50;
+        // var number = 50;
        
-        client.write(number.toString());
+        client.write("50");
 
          var sum = parseInt(data.toString());
          console.log("Sum is  :   " + sum);
