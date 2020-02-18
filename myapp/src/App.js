@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
+import './App.css';
+import PropsTest from './prprsTest';
 
 
 
 const App = () => {
-
-  // State
+   
+  // การใช้ State
 
   const [num, setNum] = useState(0);
 
   return (
-
     <div className="App">
-      <div>
-        <h1>Counter : {num}</h1>
-        <button onClick={() => setNum(num + 1)}> Add </button>
-      </div>
+      <h1> Counter Program </h1>
+      <PropsTest />
     </div>
 
   );
