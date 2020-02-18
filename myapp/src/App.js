@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import PropsTest from './prprsTest';
 import StateTest from './stateTest';
+import EffectTest from './effect';
 
 
 
@@ -13,11 +14,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1> Counter Program </h1>
+      <h1> Use State </h1>
       <PropsTest />
 
-      <h2>Props Test</h2>
+      <h2>Use Props</h2>
       <StateTest />
+
+      <h2>Use Effect</h2>
+      <EffectTest />
     </div>
 
   );

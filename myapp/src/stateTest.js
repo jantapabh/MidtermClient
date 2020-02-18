@@ -5,7 +5,7 @@ const ShowName = (props) => (
 
     <div>
         Name : {props.name} <br />
-        Surname : {props.surname}
+        Surname : {props.surname} <br />
         ID: {props.id}
    </div>
 
