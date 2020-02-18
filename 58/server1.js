@@ -24,14 +24,14 @@ net.createServer(function (sock) {
 
             j = 1 ;
     
-        }
+        }else{
 
             if (j == 1) {
 
                 var sum = 0;
+                console.log(data.toString());
 
-         if(data.toString() == "Jantapa"){
-
+       
                 if (sum == 0) {
                     sum = 0 + (parseInt(data.toString()));
                     sock.write(sum.toString());
@@ -46,10 +46,7 @@ net.createServer(function (sock) {
                 }
             }
         }
-    }
-    
-
-    );
+});
 
     sock.on('close', function (data) {
 
