@@ -12,7 +12,7 @@ var client = new net.Socket();
 client.connect(PORT, HOST, function () {
 
     console.log('Connected');
-    client.write("Jantapa"); // + or -
+    client.write("Jantapa"); // ส่งชื่อ
     
 });
 
@@ -26,19 +26,15 @@ client.on('data', function (data) {
 
         console.log(resp.toString());
         
+        var number = 50;
        
+        client.write(number.toString());
 
-        // client.write(number.toString());
+         var sum = parseInt(data.toString());
+         console.log("Sum is  :   " + sum);
+  
 
-        // if(!data.toString())
-        // {
-        //        var sum = parseInt(data.toString());
-        //        console.log("Sum is  :   " + sum);
-
-        // }
-
-           
-            
+                      
     }
 });
 

@@ -23,6 +23,16 @@ net.createServer(function (sock) {
 
             sock.write("OK");
 
+            j = 1;
+
+            if( j == 1){
+                
+                var num = parseInt(data);
+
+                console.log(num);
+
+
+            }
            
         }
     
