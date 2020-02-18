@@ -17,7 +17,7 @@ net.createServer(function (sock) {
         if(data.toString() == 'Jantapa')
         {
             
-            console.log("Jan");
+            // console.log("Jan");
 
             let name = data.toString();
 

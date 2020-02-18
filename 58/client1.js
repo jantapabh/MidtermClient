@@ -23,6 +23,8 @@ client.on('data', function (data) {
 
     if(resp.toString() == "OK")
     {
+
+        console.log(resp.toString());
         
        
 
