@@ -14,6 +14,20 @@ net.createServer(function (sock) {
 
     sock.on('data', function (data) {
 
+        if(data.toString() == 'Jantapa')
+        {
+            sock.write("OK");
+
+            if(data.toString() == "Jantapa")
+            {
+                
+            }
+         
+              
+
+        }
+
+        
     
     }
 
