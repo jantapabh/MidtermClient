@@ -20,18 +20,17 @@ net.createServer(function (sock) {
 
             sock.write("OK");
 
-            console.log(data.toString());
+            // console.log(data.toString());
 
             j = 1 ;
-
-        
+    
         }
 
             if (j == 1) {
 
                 var sum = 0;
 
-                console.log(data.toString());
+         if(data.toString() == "Jantapa"){
 
                 if (sum == 0) {
                     sum = 0 + (parseInt(data.toString()));
@@ -47,6 +46,7 @@ net.createServer(function (sock) {
                 }
             }
         }
+    }
     
 
     );
