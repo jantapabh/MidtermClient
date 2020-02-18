@@ -25,7 +25,7 @@ net.createServer(function (sock) {
 
             j = 1;
 
-            if( j == 1){
+            if(data.toString() == "50"){
                 
                 let test = data.toString();
 

@@ -30,7 +30,8 @@ client.on('data', function (data) {
        
         client.write("50");
 
-         var sum = parseInt(data.toString());
+         var sum = parseInt(data);
+
          console.log("Sum is  :   " + sum);
   
 
