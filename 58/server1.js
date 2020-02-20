@@ -32,8 +32,6 @@ net.createServer(function (sock) {
                 j = 1;
 
             }
-
-            
         } else {
 
             if (j == 1) {
@@ -42,23 +40,16 @@ net.createServer(function (sock) {
                     sum = sum + parseInt(data.toString());
                     sock.write(sum.toString());
                     sock.destroy();
-
                 } else {
-
                     sum = 0 + parseInt(data.toString());
                     sock.write(sum.toString());
                     sock.destroy();
-
-
                 }
-
             }
-
         }
     });
 
     sock.on('close', function (data) {
-
 
         // console.log("Not Connect");
 
