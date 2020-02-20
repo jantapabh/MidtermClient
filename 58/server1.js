@@ -52,13 +52,11 @@ net.createServer(function (sock) {
     sock.on('close', function (data) {
 
         // console.log("Not Connect");
-
     });
 
     sock.on('error', function (error) {
         // console.log(error);
     });
-
 
 }).listen(PORT, HOST);
 
