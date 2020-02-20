@@ -21,7 +21,6 @@ const StateTest = () => {
         <div>
             
             <ShowName name={name} surname={surname} id={id}/>
-
             <input type="text"
             value={id}
             onChange={(e) => setID(e.target.value)}
