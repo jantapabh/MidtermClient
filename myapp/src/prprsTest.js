@@ -8,10 +8,12 @@ const PropsTest = () => {
 
   // State
 
-  
+
   const [num, setNum] = useState(0);
   const [count, setCount] = useState(0);
+
   return (
+
     <div className="App">
         <div>
         <h1>Result : {num}</h1>
@@ -23,6 +25,7 @@ const PropsTest = () => {
         value={count}
         onchange={(e) => setCount(e.target.value)} />
       </div>
+      
     </div>
   );
 }
