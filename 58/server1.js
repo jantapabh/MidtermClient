@@ -2,6 +2,7 @@
 // TCP Server 58
 
 
+
 var net = require('net');
 var HOST = '127.0.0.1';
 var PORT = 1337;
@@ -10,11 +11,13 @@ var sum = 0;
 
 net.createServer(function (sock) {
 
+
     console.log('Strat connect : ' + sock.remoteAddress + ':' + sock.remotePort);
 
     sock.on('data', function (data) {
 
         if (data.toString() == 'Jantapa') {
+
 
             let name = "Jantapa";
 
@@ -30,6 +33,7 @@ net.createServer(function (sock) {
 
             }
 
+            
         } else {
 
             if (j == 1) {
