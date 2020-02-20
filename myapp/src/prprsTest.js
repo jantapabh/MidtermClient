@@ -8,8 +8,6 @@ const PropsTest = () => {
   // State
   const [num, setNum] = useState(0);
   const [count, setCount] = useState(0);
-
-
   return (
     <div className="App">
         <div>
