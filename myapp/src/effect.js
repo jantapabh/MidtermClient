@@ -3,7 +3,6 @@ import App from './App';
 
 // userEffect
 
-
 const EffectTest = () => {
 
     const URL = 'https://api.github.com/users/tanakorn0314'
@@ -21,12 +20,9 @@ const EffectTest = () => {
         const respone = await fetch(URL);
         setAvatar_url((await respone.json()).avatar_url);
         console.log(avatar_url);
-    
-
     }
 
     return (
-
         <div className="App">
             <div>
                 <h1>Hello</h1>
@@ -36,10 +32,8 @@ const EffectTest = () => {
    
             </div>
         </div>
-
     );
 }
-
 export default EffectTest;
 
 
