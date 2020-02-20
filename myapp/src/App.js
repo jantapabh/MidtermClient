@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-
 import Map from './map';
-
-
 
 
 const App = () => {
@@ -13,12 +10,8 @@ const App = () => {
   return (
     
     <div className="App">
-      
-
       <h1>Array Map</h1>
       <Map />
-     
-
     </div>
 
   );
